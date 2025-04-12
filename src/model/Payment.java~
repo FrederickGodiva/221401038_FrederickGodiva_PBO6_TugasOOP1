@@ -1,0 +1,35 @@
+package model;
+
+public class Payment {
+    private double totalPrice;
+    private String paymentMethod;
+    private String paymentStatus;
+
+    public Payment(double totalPrice, String paymentMethod) {
+        this.totalPrice = totalPrice;
+        this.paymentMethod = paymentMethod;
+        this.paymentStatus = "";
+    }
+
+    public void processPayment(String method) {
+        this.paymentMethod = method;
+        this.paymentStatus = "Pembayaran Berhasil dengan " + method;
+    }
+
+    public double processPayment(String method, double discountPercentage) {
+        this.paymentMethod = method;
+        double discountAmount = totalPrice * (discountPercentage / 100);
+        totalPrice = totalPrice - discountAmount;
+        this.paymentStatus = "Pembayaran Berhasil dengan " + method;
+        return totalPrice;
+    }
+
+    public void printPaymentDetail() {
+        System.out.println("Metode Pembayaran: " + paymentMethod);
+        System.out.println("Status Pembayaran: " + paymentStatus);
+    }
+
+    public double getFinalPrice() {
+        return totalPrice;
+    }
+}
