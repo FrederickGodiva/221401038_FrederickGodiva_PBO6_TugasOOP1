@@ -1,41 +1,55 @@
-# PBO6_TugasOOP1, Sistem Pembayaran Online
+<h1 align="center">Tugas 1 PBO 6</h1>
 
-## Deskripsi Tugas
-IKLCMart adalah sebuah toko online yang menjual berbagai macam produk teknologi. Sebagai bagian dari sistem belanja mereka, pelanggan dapat memilih berbagai metode pembayaran, mulai dari **Kartu Kredit, Transfer Bank, hingga Voucher Diskon**. Setiap transaksi yang dilakukan akan membutuhkan **perhitungan total harga setelah diskon, serta status pembayaran yang jelas (apakah berhasil atau gagal)**.
+# Table of Contents
 
-Sebagai seorang developer junior di tim IKLCMart, kamu ditugaskan untuk membuat sistem pembayaran online yang dapat menangani beberapa **metode pembayaran, menghitung total harga setelah diskon, dan menampilkan status pembayaran** kepada pengguna.
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Tech Stack](#tech-stack)
+- [Usage](#usage)
 
-### Payment Class
-- Attribute: totalPrice, paymentMethod, paymentStatus
-- Constructor dengan parameter totalPrice dan paymentMethod
-- Overloading Method: Method menerima parameter paymentMethod (Credit Card, Bank Transfer, Voucher)
-- Void Method: Menampilan Detail pembayaran (paymentStatus dan paymentMethod)
-- Return Type Method: Mengembalikan totalPrice setelah di diskon jika memakai Voucher
+# Overview
+This is a project for the OOP class. The project is about creating a payment system that can handle various payment methods, calculate the total price after discount, and display the payment status to the user.
 
-### Main Class
-- Instansiasi
-- Menampilkan Total Harga sebelum diskon
-- Menampilkan Metode Pembayaran
-- Menampilkan Status Pembayaran
+# Project Structure
 
-### Case Study
-- Siti memutuskan untuk membeli gadget terbaru di IKLCMart seharga Rp3.500.000. Namun, dia memilih untuk membayar menggunakan Kartu Kredit.
-Total Harga Sebelum Diskon: Rp 3.500.000 <br>
-Metode Pembayaran: Kartu Kredit <br>
-Status Pembayaran: Pembayaran Berhasil dengan Kartu Kredit
-- Ciciripi baru saja membeli sebuah laptop di IKLCMart dengan harga Rp 10.000.000. Karena Ciciripi adalah pengguna setia, dia memiliki voucher diskon sebesar 15%. Ciciripi memilih untuk menggunakan Voucher Diskon sebagai metode pembayarannya. <br>
-Total Harga Sebelum Diskon: Rp 10.000.000 <br>
-Voucher Diskon: 15% <br>
-Metode Pembayaran: Voucher Diskon <br>
-Status Pembayaran: Pembayaran Berhasil dengan Voucher Diskon
-- Asnawi membeli berbagai aksesoris komputer dengan total harga Rp 1.200.000. Namun, dia tidak memiliki voucher dan melakukan pembayaran menggunakan Transfer Bank. <br>
-Total Harga Sebelum Diskon: Rp 1.200.000 <br>
-Metode Pembayaran: Transfer Bank <br>
-Status Pembayaran: Pembayaran Berhasil dengan Transfer Bank
+```
+├── out                             # Compiled Files
+├── README.md                       # Project Documentation
+├── Requirements.md                 # Assignment Description
+├── src             
+|  ├── Main.java                    # Entry Point
+|  ├── model
+|  |  └── Payment.java              # Payment Class
+|  ├── service
+|  |  └── PaymentService.java       # Payment Service
+|  └── util
+|     └── CurrencyFormatter.java    # Currency Formatter Class
+└── Tugas1_PBO6.iml                 # IntelliJ Project File
+```
 
-### Output
-Terdapat 3 Objek (Siti, Ciciripi, dan Asnawi) sesuai Case Study di atas
+# Tech Stack
 
-## Pengumpulan
-Deadline: Selasa, 08 April 23:59 WIB <br>
-RepoForkName: NIM_Nama_PBO6_TugasOOP1
+[![Tech Stack](https://skillicons.dev/icons?i=java)](https://www.java.com/en/)
+
+# Usage
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/FrederickGodiva/221401038_FrederickGodiva_PBO6_TugasOOP1.git
+    ```
+2. Open Project
+   ```bash
+   cd 221401038_FrederickGodiva_PBO6_TugasOOP1
+   ```
+3. Compile All Files
+   ```bash
+   javac -d out src/model/Payment.java src/service/PaymentService.java src/util/CurrencyFormatter.java src/Main.java
+   ```
+4. Run Main Class
+   ```bash
+   java -cp out Main
+   ```
+   
+---
+
+Copyright &copy; 2025 Frederick Godiva
